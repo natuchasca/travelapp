@@ -1,0 +1,8 @@
+.destination
+  .container
+    .row
+      .col-xs-12
+        = image_tag @destination.image
+        h2= @destination.name
+        p= @destination.description
+        = link_to "Edit", edit_destination_path(@destination)

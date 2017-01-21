@@ -1,0 +1,10 @@
+.tags
+  .container
+    .cards.row
+      /Recorre todas las tags 
+      - @tags.each do |t|
+        .card.col-xs-4
+          /Imprime cada tag imagen, titulo y el link hacia el destination
+          = image_tag t.image
+          h2 = t.title
+          = link_to "Learn more", tag_path(t)
