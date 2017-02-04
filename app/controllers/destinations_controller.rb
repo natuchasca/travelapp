@@ -1,12 +1,12 @@
 class DestinationsController < ApplicationController
   def show
-    @destination = Destination.find(params[:id])
+    @destination = Destination.friendly.find(params[:id])
   end
   def edit 
-    @destination = Destination.find(params[:id]) 
+    @destination = Destination.friendly.find(params[:id]) 
   end
   def update 
-    @destination = Destination.find(params[:id]) 
+    @destination = Destination.friendly.find(params[:id]) 
     if @destination.update_attributes(destination_params) 
       redirect_to(:action => 'show', :id => @destination.id) 
     else 
